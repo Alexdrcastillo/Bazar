@@ -1,0 +1,12 @@
+.container {
+   display: flex;
+   align-items: center;
+}
+
+@media (max-width: 768px) {
+
+.search {
+   margin-top: 30vh;
+   margin-left: -30vh;
+}
+}

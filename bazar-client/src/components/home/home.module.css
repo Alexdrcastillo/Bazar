@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card img {
+    width: 30vh;
+    height: 25vh;
+}
+
+.card {
+    background-color: black;
+    width: 40vh;
+    margin: 30px;
+    text-align: center;
+    height: 80vh;
+}
+
+.card p {
+    margin: -0px;
+}
+
