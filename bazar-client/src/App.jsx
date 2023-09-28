@@ -4,6 +4,7 @@
   import { useEffect } from 'react'
   import { getAllProducts } from './redux/actions'
   import Home from './components/home/Home'
+import Detail from './views/detail/Detail'
 
   function App() {
 
@@ -14,6 +15,7 @@
         <Routes>
         <Route path='/' element={<Landing/>}/>
         <Route path="/products/:query" element={<Home />} />
+        <Route path='/detail/:id' element={<Detail />} />
         </Routes> 
 
         </div>

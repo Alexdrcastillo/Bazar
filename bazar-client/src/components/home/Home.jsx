@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import styles from "./home.module.css"
 import { Card } from 'antd';
+import Searchbar from '../../views/Navbar/searchbar';
 const { Meta } = Card;
 
 const Home = () => {
@@ -23,24 +24,30 @@ const Home = () => {
     console.log(products)
 
   return (
-    <div className={styles.container}>
+    <div >
+<div style={{marginRight: "600px", height: "80px"}}>
+      <Searchbar />
+</div>
+
+<div className={styles.container}>
         {
             products.map(product => {
                 return (
+           <Link to={`/detail/${product._id}`} >
             <Card
                  hoverable
-                 style={{
-                  width: 240,
-                  margin: 30,
-                  textAlign: 'center'
-                 }}
-                cover={<img alt="product" style={{height: "150px", width: "200px", textAlign: "center"}} src={product.images[0]} />}
+                 className={styles.cardContainer} 
+                cover={<img alt="product" style={{height: "150px", width: "200px", textAlign: "center", display: "flex"}} src={product.images[0]} />}
                  >
                <Meta title={product.brand} description={product.description} />
            </Card>
+           </Link>       
                 )
             })
         }
+</div>
+  
+
     </div>
   )
 }

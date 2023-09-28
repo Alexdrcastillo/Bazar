@@ -1,0 +1,9 @@
+.card {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text {
+    width: 80vh;
+}
