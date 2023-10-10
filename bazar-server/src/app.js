@@ -1,8 +1,8 @@
-import express from "express";
-import morgan from "morgan";
-import path from "path";
-import cors from 'cors'
-import routes from "./routes/routes.js";
+const express = require("express");
+const morgan = require("morgan");
+const path = require("path");
+const cors = require('cors');
+const routes = require("./routes/routes.js");
 
 const app = express();  
 
@@ -18,4 +18,4 @@ app.use("/", routes);
 // Static Files
 app.use(express.static(path.resolve("public")));
 
-export default app;
+module.exports = app;

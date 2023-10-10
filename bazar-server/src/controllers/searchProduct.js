@@ -1,6 +1,6 @@
-import product from "../models/product.js";
+const product = require("../models/product.js");
 
-export const searchProduct = async (req, res) => {
+const searchProduct = async (req, res) => {
     try {
         const { search } = req.query;
 
@@ -21,3 +21,5 @@ export const searchProduct = async (req, res) => {
         res.json(error);
     }
 }
+
+module.exports = { searchProduct };

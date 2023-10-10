@@ -1,8 +1,7 @@
-import mongoose from "mongoose";
-
+const mongoose = require("mongoose");
 const URI = "mongodb://127.0.0.1:27017/bazar-products";
 
-export const connectDB = async () => {
+const connectDB = async () => {
   try {
     const conn = await mongoose.connect(URI);
     console.log("DB is connected", conn.connection.host);
@@ -10,3 +9,5 @@ export const connectDB = async () => {
     console.log(error);
   }
 };
+
+module.exports = { connectDB };

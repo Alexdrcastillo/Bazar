@@ -5,6 +5,7 @@
   import { getAllProducts } from './redux/actions'
   import Home from './components/home/Home'
 import Detail from './views/detail/Detail'
+import Form from './views/form/Form'
 
   function App() {
 
@@ -16,6 +17,7 @@ import Detail from './views/detail/Detail'
         <Route path='/' element={<Landing/>}/>
         <Route path="/products/:query" element={<Home />} />
         <Route path='/detail/:id' element={<Detail />} />
+        <Route path='/sell' element={<Form />} />
         </Routes> 
 
         </div>

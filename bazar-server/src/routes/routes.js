@@ -1,15 +1,14 @@
-import { Router } from "express";
-import { getProducts}  from "../controllers/getProducts.js";
-import { postProduct } from "../controllers/postProduct.js";
-import { searchProduct } from "../controllers/searchProduct.js";
-import { getProductById } from "../controllers/getProductById.js";
+const express = require("express");
+const {getProducts} = require("../controllers/getProducts.js");
+const {postProduct} = require("../controllers/postProduct.js");
+const {searchProduct} = require("../controllers/searchProduct.js");
+const {getProductById}= require("../controllers/getProductById.js");
 
-const router = Router();
+const router = express.Router();
 
-router.get("/", getProducts);
+router.get("/products", getProducts);
 router.post("/", postProduct);
 router.get("/product/:id", getProductById);
 router.get("/search", searchProduct)
 
-
-export default router;
+module.exports = router;

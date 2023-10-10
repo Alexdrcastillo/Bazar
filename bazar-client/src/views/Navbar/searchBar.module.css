@@ -1,7 +1,12 @@
 .container {
    display: flex;
    align-items: center;
-   position: fixed;
+   position: fixed; 
+   background-color: #fff159; 
+   width: 100%;
+   height: 10%;
+   top: 0;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

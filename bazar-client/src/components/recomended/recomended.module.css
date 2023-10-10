@@ -1,0 +1,17 @@
+.card img {
+   width: 100px;
+   height: 100px;
+
+}
+
+.card { 
+    color: black;
+    margin-left: 30px;
+    border: 2px solid black;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
